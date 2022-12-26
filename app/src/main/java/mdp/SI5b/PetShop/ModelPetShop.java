@@ -1,6 +1,6 @@
-package mdp.SI5b.Pahlawanku;
+package mdp.SI5b.PetShop;
 
-public class ModelPahlawan {
+public class ModelPetShop {
     private String nama, tentang, foto;
 
     public String getNama() {

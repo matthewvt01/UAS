@@ -1,4 +1,4 @@
-package mdp.SI5b.Pahlawanku;
+package mdp.SI5b.PetShop;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,32 +15,32 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class AdapterPahlawan extends RecyclerView.Adapter<AdapterPahlawan.VHPahlawan> {
-    private ArrayList<ModelPahlawan> dataPahlawan;
+public class AdapterPetShop extends RecyclerView.Adapter<AdapterPetShop.VHPetShop> {
+    private ArrayList<ModelPetShop> dataPetShop;
     private Context ctx;
 
-    public AdapterPahlawan(ArrayList<ModelPahlawan> dataPahlawan, Context ctx) {
-        this.dataPahlawan = dataPahlawan;
+    public AdapterPetShop(ArrayList<ModelPetShop> dataPetShop, Context ctx) {
+        this.dataPetShop = dataPetShop;
         this.ctx = ctx;
     }
 
     @NonNull
     @Override
-    public VHPahlawan onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VHPetShop onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View VW = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card, parent, false);
-        return new VHPahlawan(VW);
+        return new VHPetShop(VW);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VHPahlawan holder, int position) {
-        ModelPahlawan pahlawan = dataPahlawan.get(position);
+    public void onBindViewHolder(@NonNull VHPetShop holder, int position) {
+        ModelPetShop petShop = dataPetShop.get(position);
 
-        holder.tvNama.setText(pahlawan.getNama());
-        holder.tvTentang.setText(pahlawan.getTentang());
+        holder.tvNama.setText(petShop.getNama());
+        holder.tvTentang.setText(petShop.getTentang());
 
         Glide
                 .with(ctx)
-                .load(pahlawan.getFoto())
+                .load(petShop.getFoto())
                 .centerCrop()
                 .into(holder.ivFoto);
 
@@ -49,9 +49,9 @@ public class AdapterPahlawan extends RecyclerView.Adapter<AdapterPahlawan.VHPahl
             public void onClick(View view) {
                 String xNama, xTentang, xFoto;
 
-                xNama = pahlawan.getNama();
-                xTentang = pahlawan.getTentang();
-                xFoto = pahlawan.getFoto();
+                xNama = petShop.getNama();
+                xTentang = petShop.getTentang();
+                xFoto = petShop.getFoto();
 
                 Intent kirim = new Intent(ctx, DetailActivity.class);
                 kirim.putExtra("xNama", xNama);
@@ -64,14 +64,14 @@ public class AdapterPahlawan extends RecyclerView.Adapter<AdapterPahlawan.VHPahl
 
     @Override
     public int getItemCount() {
-        return dataPahlawan.size();
+        return dataPetShop.size();
     }
 
-    public class VHPahlawan extends RecyclerView.ViewHolder {
+    public class VHPetShop extends RecyclerView.ViewHolder {
         TextView tvNama, tvTentang;
         ImageView ivFoto;
 
-        public VHPahlawan(@NonNull View itemView) {
+        public VHPetShop(@NonNull View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.tv_nama);
             tvTentang = itemView.findViewById(R.id.tv_tentang);

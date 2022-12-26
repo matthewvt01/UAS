@@ -7,10 +7,9 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_pahlawan"
+        android:id="@+id/rv_petshop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_card"/>
-
 
 </RelativeLayout>

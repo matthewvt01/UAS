@@ -1,8 +1,8 @@
-package mdp.SI5b.Pahlawanku;
+package mdp.SI5b.PetShop;
 
 import java.util.ArrayList;
 
-public class DataPahlawan {
+public class DataPetShop {
     public static String[][] data = new String[][]{
             {"Evo Petshop", "Toko perlengkapan hewan peliharaan di Palembang, Sumatera Selatan Alamat: Jl. Lingkaran1 No.565, 15 Ilir, Kec. Ilir Tim. I, Kota Palembang, Sumatera Selatan 30125 Telepon: 0812-1660-0400\n" +
                     "Provinsi: Sumatera Selatan", "https://lh3.googleusercontent.com/p/AF1QipNddH6fAzQsheRxQkp8UdrioL29JQ7rm5V8x3IL=s680-w680-h510"},
@@ -22,18 +22,18 @@ public class DataPahlawan {
             {"Jawara Petshop", "Toko perlengkapan hewan peliharaan di Palembang Alamat :  Jl. Jend. Sudirman, 24 Ilir, Kec. Bukit Kecil, Kota Palembang, Sumatera Selatan 30114, Indonesia  Nomor Telepon\t: 0853-6868-9293", "https://zh0f45.n3cdn1.secureserver.net/wp-content/uploads/2021/08/Jawara.jpg"}
     };
 
-    public static ArrayList<ModelPahlawan> ambilDataPahlawan(){
-        ArrayList<ModelPahlawan> dataPahlawan = new ArrayList<>();
+    public static ArrayList<ModelPetShop> ambilDataPetShop(){
+        ArrayList<ModelPetShop> dataPetShop = new ArrayList<>();
 
         for(String[] varData: data){
-            ModelPahlawan mdl = new ModelPahlawan();
+            ModelPetShop mdl = new ModelPetShop();
             mdl.setNama(varData[0]);
             mdl.setTentang(varData[1]);
             mdl.setFoto(varData[2]);
 
-            dataPahlawan.add(mdl);
+            dataPetShop.add(mdl);
         }
 
-        return dataPahlawan;
+        return dataPetShop;
     }
 }

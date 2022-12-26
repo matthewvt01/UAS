@@ -1,4 +1,4 @@
-package mdp.SI5b.Pahlawanku;
+package mdp.SI5b.PetShop;
 
 import org.junit.Test;
 
